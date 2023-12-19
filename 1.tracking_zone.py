@@ -5,8 +5,7 @@ from ultralytics import YOLO
 model = YOLO('yolov8n.pt')
 
 # Open the video file
-video_path = "video1.mp4"
-cap = cv2.VideoCapture(video_path)
+cap = cv2.VideoCapture("video1.mp4")
 
 # Loop through the video frames
 while cap.isOpened():
@@ -46,7 +45,7 @@ while cap.isOpened():
                         image = cv2.putText(frame, text, location, font,
                                             fontScale, (0, 0, 255), thickness, cv2.LINE_AA)
 
-                    # Display the annotated frame
+        # Display the frame
         cv2.imshow("YOLOv8 Tracking", frame)
 
         # Break the loop if 'q' is pressed
