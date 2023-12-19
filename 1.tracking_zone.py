@@ -16,6 +16,7 @@ while cap.isOpened():
     y1 = 200
     y2 = 700
     frame_cut = frame[y1:y2, x1:x2]
+    # draw zone detect
     start_point = (x1, y1)
     end_point = (x2, y2)
     color = (255, 255, 0)
